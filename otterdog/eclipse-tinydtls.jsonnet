@@ -28,10 +28,6 @@ orgs.newOrg('iot.tinydtls', 'eclipse-tinydtls') {
       delete_branch_on_merge: false,
       description: "Eclipse tinydtls",
       homepage: "https://projects.eclipse.org/projects/iot.tinydtls",
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
     },
   ],
 } + {
