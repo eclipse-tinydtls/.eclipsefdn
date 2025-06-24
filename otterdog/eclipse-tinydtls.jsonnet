@@ -18,21 +18,19 @@ orgs.newOrg('iot.tinydtls', 'eclipse-tinydtls') {
     },
   ],
   _repositories+:: [
+    orgs.newRepo('.github') {
+    },
     orgs.newRepo('tinydtls') {
       allow_merge_commit: true,
       allow_update_branch: false,
       code_scanning_default_languages+: [
-        "c-cpp"
+        "actions",
+        "c-cpp",
       ],
       code_scanning_default_setup_enabled: true,
       delete_branch_on_merge: false,
       description: "Eclipse tinydtls",
       homepage: "https://projects.eclipse.org/projects/iot.tinydtls",
     },
-  ],
-} + {
-  # snippet added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
-  _repositories+:: [
-    orgs.newRepo('.github')
   ],
 }
